@@ -20,7 +20,7 @@ def hola_mundo():
 
 @app.get("/arduino/{nled}")
 def blink_led(nled):
-    arduino = serial.Serial("/dev/ttyACM0", 9600)
+    arduino = serial.Serial("COM5", 9600)
     time.sleep(2)
     #  Configuracion Arduino
     arduino.write(str(nled).encode())
